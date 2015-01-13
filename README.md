@@ -16,5 +16,8 @@ Steps to start
 
 1. Install NodeJs from the following link
       URL :  http://nodejs.org/
+      C:\Users\CloudFuze>npm
+      Error: ENOENT, stat 'C:\Users\CloudFuze\AppData\Roaming\npm'
+            To avoid this error create npm folder in the above path.
 2. Install Cordova
       npm install -g cordova
