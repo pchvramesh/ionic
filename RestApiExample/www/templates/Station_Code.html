@@ -1,0 +1,27 @@
+<ion-view view-title="Station Code">
+    <ion-content>
+        <div  id = "stationCode" class="list" ng-controller="get_stationCode">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Enter station name.</span>
+                <input type="text" placeholder="Enter station name." ng-model="stationName" ngTrim>
+            </label>
+            <div><button class="button  button-block button-balanced" ng-click="getCode()" >Get Station Code</button></div>
+            <div ng-hide="status" class="ng-hide" ng-init="status = true">
+                <div class="row">
+                    <div class="col col-100">
+                        <ul class="list">
+                            <li class="item1">
+                                <span>Staion Name</span>
+                                <span>Station Code</span>
+                            </li>
+                            <li class="item1" ng:repeat="r in result.stations">
+                                <span>{{r.stationName | lowercase | capetalize}}</span>
+                                <span>{{r.stationCode}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
