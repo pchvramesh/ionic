@@ -26,7 +26,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
                 templateUrl: "templates/menu.html",
                 controller: 'AppCtrl'
             })
-
             .state('app.dictionary', {
                 url: "/dictionary",
                 views: {
@@ -35,12 +34,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
                     }
                 }
             })
-
             .state('app.pnr_status', {
                 url: "/pnr_status",
                 views: {
                     'menuContent': {
-                        templateUrl: "templates/PNR_Status.html"
+                        templateUrl: "templates/pnrstatus.html"
                     }
                 }
             })
@@ -66,7 +64,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
                 views: {
                     'menuContent': {
                         templateUrl: "templates/welcome.html"
-
+                    }
+                }
+            })
+            .state('app.weather', {
+                url: "/weather",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/weather.html",
+                        controller:"weather"
                     }
                 }
             })
