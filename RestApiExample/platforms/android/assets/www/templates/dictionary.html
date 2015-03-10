@@ -1,0 +1,24 @@
+<ion-view view-title="Dictionary">
+  <ion-content>
+      <div class="list" ng-controller="dictionary" id="dic">
+        <label class="item item-input item-floating-label">
+            <span class="input-label">Enter a word</span>
+            <input type="text" placeholder="Enter a word" ng-model="dicWord" ngRequired="true">
+        </label>
+        <div>
+            <button class="button  button-block button-balanced" ng-click="getMeaning(dicWord)" > Get Meaning</button>
+        </div>
+        <div ng-hide="status" class="ng-hide" ng-init="status = true">
+            <div class="row">
+                <ul class="list">
+                    <li class="item1" ng:repeat="r in result.results">
+                        <p><b>{{r.headword}}</b>({{r.part_of_speech}})</p>
+                        <p>{{r.senses[0].definition | capetalize}}</p>
+                        <p>Example: {{r.senses[0].examples[0].text | capetalize}}</p>
+                    </li>
+                </ul>
+            </div>
+          </div>
+      </div>
+  </ion-content>
+</ion-view>

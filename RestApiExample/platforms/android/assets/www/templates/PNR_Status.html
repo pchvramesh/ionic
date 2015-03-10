@@ -1,0 +1,57 @@
+<ion-view view-title="PNR Status">
+  <ion-content>
+    <div class="list" ng-controller="get_pnrstatus">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Enter PNR Number</span>
+        <input type="number" placeholder="Enter PNR Number" ng-model="pnrNumber" ngRequired="true" ngMinlength="10" ngMaxlength="10" ngTrim>
+      </label>
+     <div>
+        <button class="button  button-block button-balanced" ng-click="getStatus(pnrNumber)" >
+  Get PNR Status
+</button>
+    </div>
+        <div ng-hide="status" class="ng-hide" ng-init="status = true">
+        <div class="row">
+            <div class="col col-100">
+                <div class="card">
+                  <div class="item item-divider">
+                    <b>Jurney Details</b>
+                  </div>
+                  <div class="item item-text-wrap">
+                      <div><b> Train Name : </b> {{result.journeyDetails.trainName}}({{result.journeyDetails.trainNumber}})</div>
+                      <div><b> Date of Journey : </b> {{result.journeyDetails.boardingDate}}</div>
+                      <div><b> From : </b> {{result.journeyDetails.from}}  <b> To: </b> {{result.journeyDetails.to}} </div>
+                  </div>
+                  <div class="item item-divider">
+                    <b>{{result.chartingStatus}}</b>
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-100">
+                <div class="card">
+                  <div class="item item-divider">
+                    <b>Passenger Details</b>
+                  </div>
+                  <div class="item item-text-wrap">
+                      <ul class="list" id="psgList">
+                          <li>
+                              <span>#</span>
+                              <span>Booking Status</span>
+                              <span>Current Status</span>
+                          </li>
+                        <li class="item" ng:repeat="pas in result.bookingStatus">
+                            <span>{{pas.passengerNo}}</span>
+                            <span>{{pas.bookingStatus}}</span>
+                            <span>{{pas.currentStatus}}</span>
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+            </div>
+    </div>
+  </ion-content>
+</ion-view>

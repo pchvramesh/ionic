@@ -1,0 +1,25 @@
+D:\RameshApp\platforms\android\ant-build\classes.dex : \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$1.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$2.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard$3.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionic\keyboard\IonicKeyboard.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\BuildConfig.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\CordovaApp.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\R$array.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\R$attr.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\R$color.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\R$dimen.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\R$drawable.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\R$id.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\R$layout.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\R$menu.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\R$raw.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\R$string.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\R$xml.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\ionicframework\rameshapp646590\R.class \
+D:\RameshApp\platforms\android\ant-build\classes\com\phonegap\plugins\barcodescanner\BarcodeScanner.class \
+D:\RameshApp\platforms\android\ant-build\classes\org\apache\cordova\device\Device.class \
+D:\RameshApp\platforms\android\ant-build\classes\org\apache\cordova\deviceorientation\CompassListener$1.class \
+D:\RameshApp\platforms\android\ant-build\classes\org\apache\cordova\deviceorientation\CompassListener.class \
+D:\RameshApp\platforms\android\ant-build\dexedLibs\classes-95fc91e2996a00c2e6c346fa6e6f8613.jar \
+D:\RameshApp\platforms\android\ant-build\dexedLibs\com.google.zxing.client.android.captureactivity-45106b3f29415d42da15909a36d7e409.jar \

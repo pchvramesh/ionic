@@ -1,0 +1,21 @@
+<ion-view view-title="Weather">
+    <ion-content>
+        <div class="row responsive-lg" ng-controller="weather" id="weather">
+            <div class="col-100">
+                <div class="col-50">
+                    <span>Latitude : {{lat}}</span>
+                </div>
+                <div class="col-50">
+                    <span>Longitude : {{long}}</span>
+                </div>
+            </div>
+            <div class="col-50">
+                <button class="button button-positive" ng-click="click()">Barcode</button>
+            </div>
+            <div class="col-50">
+                <div>{{codeText}}</div>
+                <div>{{codeFormat}}</div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
