@@ -46,4 +46,48 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
         console.log($stateParams);
-});
+})
+.controller('pnrlist',['$scope','$cordovaSQLite',function(a,b){
+        var db = b.openDB("main.db");
+        var query = "select name from sqlite_master where type='table' and name = 'pnr_table'";
+        var queryCheck = b.execute(db, query,[]).then(function(res){
+            if(res.rows.length > 0){
+                var query = "insert into pnr_table values(?)";
+                b.execute(db,query,['ramesh']).then(function(res){
+                    //a.inserted = true;
+                    console.log("Insert Success "+res);
+                    var query = "select * from pnr_table";
+                    b.execute(db,query,[]).then(function(res){
+                        if(res.rows.length > 0) {
+                            console.log(res.rows.item[0]);
+                            /*var data = [];
+                            angular.forEach(res.rows,function(i,res){
+                                var arr = {};
+                                arr.name = res.item.name;
+                                data.push(arr);
+                            });*/
+                        }
+                        a.items = data;
+                        console.log("Select Success "+data);
+                    },function(err){
+                        console.log("Select Error");
+                    });
+                },function(err){
+                    //a.inserted = false;
+                    console.log("Insert Failed");
+                });
+            }
+            else{
+                var query = "create table pnr_table('name varchar(128)')";
+                b.execute(db,query).then(function(res){
+                    //a.created = "true";
+                    console.log("Create Success");
+                },function(err){
+                    console.log("Create failed");
+                    //a.created = "eroor"
+                });
+            }
+        },function(err){
+            a.errdetails = err;
+        });
+    }]);
